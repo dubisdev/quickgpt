@@ -1,0 +1,54 @@
+.response {
+    padding: 4px 8px;
+    font-size: medium;
+}
+
+.reponse h1,
+.response h2,
+.response h3,
+.response h4,
+.response h5,
+.response h6 {
+    font-size: medium;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.response h1 {
+    font-size: x-large;
+}
+
+.response h2 {
+    font-size: large;
+}
+
+.reponse h3 {
+    font-size: medium;
+}
+
+.response p {
+    font-size: medium;
+    font-weight: 400;
+}
+
+.response ul {
+    font-size: medium;
+    font-weight: 400;
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.response ol {
+    font-size: medium;
+    font-weight: 400;
+    list-style-type: decimal;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.response li {
+    font-size: medium;
+    font-weight: 400;
+    margin: 5px 0;
+}

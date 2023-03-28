@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { GptResponse } from "./components/GptResponse";
+import { InputBox } from "./components/InputBox";
+import { Settings } from "./components/Settings";
+import { useQuickGptStore } from "./state/store";
 import styles from "./styles.module.css";
 
 export const QuickGpt = () => {
-  const [gptResponse, setGptResponse] = useState("");
+  const input = useQuickGptStore(s => s.input)
+  const gptResponse = useQuickGptStore(s => s.gptResponse)
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      console.log("Enter key pressed");
-    }
-  };
+  const shouldDisplaySettings = input.match(/^:settings:$/i);
 
   return (
     <div data-tauri-drag-region className={styles.container}>
-      <input autoFocus onKeyDown={handleKeyDown} placeholder="Ask GPT for help..." className={styles.inputBox}/>
-      { gptResponse && <div>{gptResponse}</div> }
+      <InputBox />
+
+      {!shouldDisplaySettings && gptResponse && <div className={styles.resultBox}><GptResponse /></div>}
+      {shouldDisplaySettings && <div className={styles.resultBox}><Settings /></div>}
     </div>
-  
-   
   );
 }

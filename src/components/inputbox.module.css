@@ -1,0 +1,30 @@
+.topArea {
+    display: flex;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2px 12px;
+    height: 40px;
+    width: 100%;
+    border-bottom: .5px solid rgb(104, 101, 101);
+    justify-content: space-between;
+}
+
+.inputBox {
+    font-size: large;
+    font-weight: 600;
+    width: 100%;
+}
+
+.inputBox:placeholder-shown {
+    color: gray;
+}
+
+button {
+    color: white;
+    background-color: rgba(21, 21, 21, 0.875);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: large;
+    font-weight: 600;
+}
