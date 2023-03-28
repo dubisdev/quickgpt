@@ -1,0 +1,9 @@
+.container {
+    min-height: 100vh;
+}
+
+.inputBox {
+    font-size: xx-large;
+    width: 100%;
+    border-bottom: 1px solid black;
+}

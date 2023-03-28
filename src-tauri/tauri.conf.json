@@ -1,0 +1,58 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "QuickGPT",
+    "version": "../package.json"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "startDragging": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "dev.dubis.quickgpt",
+      "targets": [
+        "msi",
+        "updater"
+      ],
+      "copyright": "David Jiménez Ⓒ 2023"
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "resizable": false,
+        "title": "QuickGPT",
+        "width": 600,
+        "height": 100,
+        "alwaysOnTop": true,
+        "decorations": false,
+        "transparent": true
+      }
+    ]
+  }
+}
