@@ -19,7 +19,7 @@ export const QuickGpt = () => {
 
       {shouldDisplayGptResponse && <GptResponse />}
       {shouldDisplaySettings && <Settings />}
-      {gptResponseError && <ErrorMessage />}
+      {gptResponseError && <ErrorMessage error={gptResponseError} />}
     </div>
   );
 }

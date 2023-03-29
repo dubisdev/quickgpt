@@ -1,6 +1,7 @@
 .response {
     padding: 4px 8px;
     font-size: medium;
+    margin-bottom: 20px;
 }
 
 .reponse h1,
@@ -51,4 +52,18 @@
     font-size: medium;
     font-weight: 400;
     margin: 5px 0;
+}
+
+.clearButton {
+    color: white;
+    background-color: rgba(21, 21, 21, 0.875);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: large;
+    font-weight: 600;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }

@@ -17,14 +17,3 @@
 .inputBox:placeholder-shown {
     color: gray;
 }
-
-button {
-    color: white;
-    background-color: rgba(21, 21, 21, 0.875);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 4px 8px;
-    font-size: large;
-    font-weight: 600;
-}
