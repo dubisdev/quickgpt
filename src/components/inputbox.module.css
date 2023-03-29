@@ -1,6 +1,6 @@
 .topArea {
     display: flex;
-    background-color: rgb(39, 43, 84);
+    background-color: rgb(84, 150, 255);
     padding: 2px 12px;
     height: 40px;
     width: 100%;
@@ -22,7 +22,6 @@
 
 .settingsIcon {
     border-radius: 50%;
-    text-align: right;
     width: 5%;
     cursor: pointer;
     font-size: x-large;

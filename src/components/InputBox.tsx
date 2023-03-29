@@ -28,7 +28,7 @@ export const InputBox = () => {
 
     const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
-            askGpt(input)
+            !loading && askGpt(input)
         }
     };
 
