@@ -1,0 +1,7 @@
+.resultBox {
+    padding: 10px;
+    overflow-y: scroll;
+    height: 560px;
+    padding: 2px 6px;
+    width: 100%;
+}

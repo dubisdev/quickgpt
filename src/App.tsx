@@ -1,20 +1,22 @@
 import { GptResponse } from "./components/GptResponse";
 import { InputBox } from "./components/InputBox";
 import { Settings } from "./components/Settings";
-import { useQuickGptStore } from "./state/store";
+import { useInputStore } from "./state/inputStore";
+import { useGptResponseStore } from "./state/gptResponseStore";
 import styles from "./styles.module.css";
 
 export const QuickGpt = () => {
-  const input = useQuickGptStore(s => s.input)
-  const gptResponse = useQuickGptStore(s => s.gptResponse)
+  const input = useInputStore(s => s.input)
+  const [gptResponse, gptResponseError] = useGptResponseStore(s => [s.gptResponse, s.error])
 
   const shouldDisplaySettings = input.match(/^:settings:$/i);
+  const shouldDisplayGptResponse = !shouldDisplaySettings && gptResponse && !gptResponseError;
 
   return (
     <div data-tauri-drag-region className={styles.container}>
       <InputBox />
 
-      {!shouldDisplaySettings && gptResponse && <div className={styles.resultBox}><GptResponse /></div>}
+      {shouldDisplayGptResponse && <div className={styles.resultBox}><GptResponse /></div>}
       {shouldDisplaySettings && <div className={styles.resultBox}><Settings /></div>}
     </div>
   );

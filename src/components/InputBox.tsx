@@ -1,11 +1,11 @@
-import { useState } from "react"
 import { askGpt } from "../services/askGpt"
-import { useQuickGptStore } from "../state/store"
+import { useGptResponseStore } from "../state/gptResponseStore"
+import { useInputStore } from "../state/inputStore"
 import styles from "./inputbox.module.css"
 
 export const InputBox = () => {
-    const [loading, setLoading] = useState(false)
-    const [input, setInput, setGptResponse] = useQuickGptStore(state => [state.input, state.setInput, state.setGptResponse])
+    const [input, setInput] = useInputStore(s => [s.input, s.setInput])
+    const [setGptResponse, loadingResponse] = useGptResponseStore(s => [s.setGptResponse, s.loadingResponse])
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInput(event.target.value);
@@ -18,15 +18,7 @@ export const InputBox = () => {
 
     const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
-            setLoading(true);
-            const { error, completion } = await askGpt(input)
-            if (error) {
-                console.error(error);
-                setGptResponse("");
-            } else {
-                setGptResponse(completion as string);
-            }
-            setLoading(false);
+            askGpt(input)
         }
 
         if (event.key === "Escape") setInput("");
@@ -41,7 +33,7 @@ export const InputBox = () => {
             className={styles.inputBox}
             value={input}
         />
-        {loading ? <button>Loading...</button>
+        {loadingResponse ? <button>Loading...</button>
             : <button onClick={handleClear}>Clear</button>}
     </div>
 }

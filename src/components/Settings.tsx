@@ -1,10 +1,9 @@
-import { useMaximizedWindow } from "../hooks/useMaximizedWindow";
 import { settingsManager } from "../services/settingsManager";
+import { ResultLayout } from "./ResultLayout";
 import styles from "./settings.module.css";
 
 export const Settings = () => {
-    useMaximizedWindow()
-    return (
+    return <ResultLayout>
         <div className={styles.wrapper}>
             <h2 className={styles.title}>QuickGTP Settings</h2>
             <section className={styles.options}>
@@ -18,5 +17,5 @@ export const Settings = () => {
                 </label>
             </section>
         </div>
-    );
+    </ResultLayout>
 };
