@@ -12,7 +12,7 @@ export type Schema = {
 };
 
 const settingsManager = new SettingsManager<Schema>(
-    { model: "text-davinci-003", apiKey: "" },
+    { model: "gpt-3.5-turbo", apiKey: "" },
     { prettify: true }
 );
 
