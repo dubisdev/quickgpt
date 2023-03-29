@@ -24,9 +24,14 @@
 
 ## 🚀 Features
 
-- 🔠 Write your question and GPT will answer it
-- Use the `Alt + A` shortcut to toggle the app
-- ~~⚙️ Choose the model you want to use~~ (Available soon)
+- 💬 ChatGPT in your desktop
+- 🧑‍💻 Code highlighting
+- ⌨️ Keyboard shortcuts to make you faster
+- ⚙️ Choose the model you want to use (Available soon)
+
+<p align="center">
+  <img src="./assets/readmegif.gif"/>
+</p>
 
 <p align="center">
   <img align="right" width="500" src="./assets/settings.png"/>
@@ -37,11 +42,14 @@
 The app works with the OpenAI API, so you need to get an API key to use it.
 
 1. Get the API key [here](https://platform.openai.com/account/api-keys).
-2. Type `:settings:` in the QuickGPT search bar
+2. Click the `⚙️` icon or type `:settings:` in the QuickGPT search bar
 3. Paste it in the `OpenAI API Key` field
 4. Start using it!
 
-## 🔜 Roadmap
+## ⌨️ Shortcuts
+
+- `Alt + A` ⮕ to toggle the app
+- `esc` ⮕ clear the input (does not clear GPT output)
 
 ## ⚖️ License
 
