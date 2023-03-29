@@ -4,6 +4,7 @@ import { Settings } from "./components/Settings";
 import { useInputStore } from "./state/inputStore";
 import { useGptResponseStore } from "./state/gptResponseStore";
 import styles from "./styles.module.css";
+import { ErrorMessage } from "./components/ErrorMessage";
 
 export const QuickGpt = () => {
   const input = useInputStore(s => s.input)
@@ -16,8 +17,9 @@ export const QuickGpt = () => {
     <div data-tauri-drag-region className={styles.container}>
       <InputBox />
 
-      {shouldDisplayGptResponse && <div className={styles.resultBox}><GptResponse /></div>}
-      {shouldDisplaySettings && <div className={styles.resultBox}><Settings /></div>}
+      {shouldDisplayGptResponse && <GptResponse />}
+      {shouldDisplaySettings && <Settings />}
+      {gptResponseError && <ErrorMessage />}
     </div>
   );
 }
