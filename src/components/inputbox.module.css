@@ -6,14 +6,23 @@
     width: 100%;
     border-bottom: .5px solid rgb(104, 101, 101);
     justify-content: space-between;
+    align-items: center;
 }
 
 .inputBox {
     font-size: large;
     font-weight: 600;
-    width: 100%;
+    width: 92%;
 }
 
 .inputBox:placeholder-shown {
     color: gray;
+}
+
+.settingsIcon {
+    border-radius: 50%;
+    text-align: right;
+    width: 5%;
+    cursor: pointer;
+    font-size: x-large;
 }

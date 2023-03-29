@@ -3,10 +3,13 @@ import { listen } from "@tauri-apps/api/event"
 import { askGpt } from "../services/askGpt"
 import { useInputStore } from "../state/inputStore"
 import styles from "./inputbox.module.css"
+import { useGptResponseStore } from "../state/gptResponseStore"
+import { LoadingIcon } from "./LoadingIcon"
 
 export const InputBox = () => {
     const inputRef = useRef<HTMLInputElement>(null)
     const [input, setInput] = useInputStore(s => [s.input, s.setInput])
+    const loading = useGptResponseStore(s => s.loadingResponse)
 
     useEffect(() => {
         listen("focus-input", () => {
@@ -39,5 +42,6 @@ export const InputBox = () => {
             className={styles.inputBox}
             value={input}
         />
+        {loading ? <LoadingIcon /> : <button className={styles.settingsIcon} onClick={() => setInput(":settings:")}>⚙️</button>}
     </div>
 }
