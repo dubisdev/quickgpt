@@ -10,8 +10,14 @@ const setupListeners = () => {
         } else {
             await tauriWindow.show();
             await tauriWindow.setFocus();
+            tauriWindow.emit("focus-input")
         }
+    });
 
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            tauriWindow.emit("set-input", "")
+        }
     });
 };
 

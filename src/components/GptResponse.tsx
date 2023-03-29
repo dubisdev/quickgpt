@@ -4,11 +4,9 @@ import { Prism } from 'react-syntax-highlighter'
 import a11yDark from 'react-syntax-highlighter/dist/esm/styles/prism/a11y-dark'
 import styles from "./gptresponse.module.css"
 import { ResultLayout } from "./ResultLayout";
-import { useInputStore } from "../state/inputStore";
+import { getCurrent } from "@tauri-apps/api/window";
 
 export const GptResponse = () => {
-    const setInput = useInputStore(s => s.setInput)
-
     const [gptResponse, setGptResponse, loadingResponse] = useGptResponseStore(s => [
         s.gptResponse,
         s.setGptResponse,
@@ -16,8 +14,8 @@ export const GptResponse = () => {
     ])
 
     const handleClear = () => {
-        setInput("");
         setGptResponse("");
+        getCurrent().emit("set-input", "");
     }
 
     return <ResultLayout>
