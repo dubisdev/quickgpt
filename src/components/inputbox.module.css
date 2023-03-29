@@ -1,12 +1,13 @@
 .topArea {
     display: flex;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(39, 43, 84);
     padding: 2px 12px;
     height: 40px;
     width: 100%;
-    border-bottom: .5px solid rgb(104, 101, 101);
+    border-bottom: .5px solid rgb(29, 28, 28);
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
 
 .inputBox {
@@ -16,7 +17,7 @@
 }
 
 .inputBox:placeholder-shown {
-    color: gray;
+    color: rgb(186, 186, 186);
 }
 
 .settingsIcon {

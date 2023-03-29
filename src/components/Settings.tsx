@@ -8,7 +8,7 @@ export const Settings = () => {
             <h2 className={styles.title}>QuickGTP Settings</h2>
             <section className={styles.options}>
                 <label>
-                    Model (only one available for now):
+                    Model:
                     <input defaultValue={settingsManager.getCache("model")} disabled />
                 </label>
                 <label>

@@ -54,6 +54,16 @@
     margin: 5px 0;
 }
 
+.response>p>code,
+.response>pre>code {
+    font-family: monospace;
+    font-size: medium;
+    font-weight: 600;
+    background-color: rgb(192, 212, 255);
+    border-radius: 5px;
+    padding: 1px 4px;
+}
+
 .clearButton {
     color: white;
     background-color: rgba(21, 21, 21, 0.875);

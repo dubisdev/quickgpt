@@ -5,8 +5,10 @@ import a11yDark from 'react-syntax-highlighter/dist/esm/styles/prism/a11y-dark'
 import styles from "./gptresponse.module.css"
 import { ResultLayout } from "./ResultLayout";
 import { getCurrent } from "@tauri-apps/api/window";
+import { useRef } from "react";
 
 export const GptResponse = () => {
+    const responseEndRef = useRef<HTMLDivElement>(null)
     const [gptResponse, setGptResponse, loadingResponse] = useGptResponseStore(s => [
         s.gptResponse,
         s.setGptResponse,
@@ -18,7 +20,14 @@ export const GptResponse = () => {
         getCurrent().emit("set-input", "");
     }
 
+    const scrollToBottom = () => {
+        responseEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    }
+
+    scrollToBottom()
+
     return <ResultLayout>
+
         <ReactMarkdown children={gptResponse} className={styles.response}
             components={{
                 code({ node, inline, className, children, ...props }) {
@@ -38,11 +47,8 @@ export const GptResponse = () => {
 
                 }
             }} />
-        {
-            loadingResponse
-                ? <button className={styles.clearButton}>Loading...</button>
-                : <button onClick={handleClear} className={styles.clearButton}>Clear</button>
-        }
+        {!loadingResponse && <button onClick={handleClear} className={styles.clearButton}>Clear</button>}
+        <div ref={responseEndRef}></div>
     </ResultLayout>
 
 };
