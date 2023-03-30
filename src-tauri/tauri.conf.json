@@ -63,6 +63,9 @@
     "updater": {
       "active": false
     },
+    "systemTray": {
+      "iconPath": "icons/icon.ico"
+    },
     "windows": [
       {
         "resizable": false,
