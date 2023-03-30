@@ -7,7 +7,7 @@ import { ResultLayout } from "./ResultLayout";
 import { getCurrent } from "@tauri-apps/api/window";
 import { useRef } from "react";
 
-export const GptResponse = () => {
+const GptResponse = () => {
     const responseEndRef = useRef<HTMLDivElement>(null)
     const [gptResponse, setGptResponse, loadingResponse] = useGptResponseStore(s => [
         s.gptResponse,
@@ -52,3 +52,5 @@ export const GptResponse = () => {
     </ResultLayout>
 
 };
+
+export default GptResponse;

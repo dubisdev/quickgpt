@@ -1,10 +1,12 @@
-import { GptResponse } from "./components/GptResponse";
-import { InputBox } from "./components/InputBox";
-import { Settings } from "./components/Settings";
+import { lazy, Suspense } from "react";
 import { useInputStore } from "./state/inputStore";
 import { useGptResponseStore } from "./state/gptResponseStore";
+import { InputBox } from "./components/InputBox";
 import styles from "./styles.module.css";
-import { ErrorMessage } from "./components/ErrorMessage";
+
+const GptResponseLazy = lazy(() => import("./components/GptResponse"));
+const SettingsLazy = lazy(() => import("./components/Settings"));
+const ErrorLazy = lazy(() => import("./components/ErrorMessage"));
 
 export const QuickGpt = () => {
   const input = useInputStore(s => s.input)
@@ -17,9 +19,9 @@ export const QuickGpt = () => {
     <div data-tauri-drag-region className={styles.container}>
       <InputBox />
 
-      {shouldDisplayGptResponse && <GptResponse />}
-      {shouldDisplaySettings && <Settings />}
-      {gptResponseError && <ErrorMessage error={gptResponseError} />}
+      {shouldDisplayGptResponse && <Suspense><GptResponseLazy /></Suspense>}
+      {shouldDisplaySettings && <Suspense><SettingsLazy /></Suspense>}
+      {gptResponseError && <Suspense><ErrorLazy error={gptResponseError} /></Suspense>}
     </div>
   );
 }

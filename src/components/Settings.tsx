@@ -2,7 +2,7 @@ import { settingsManager } from "../services/settingsManager";
 import { ResultLayout } from "./ResultLayout";
 import styles from "./settings.module.css";
 
-export const Settings = () => {
+const Settings = () => {
     return <ResultLayout>
         <div className={styles.wrapper}>
             <h2 className={styles.title}>QuickGTP Settings</h2>
@@ -19,3 +19,5 @@ export const Settings = () => {
         </div>
     </ResultLayout>
 };
+
+export default Settings;
