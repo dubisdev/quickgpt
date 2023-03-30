@@ -40,9 +40,10 @@ fn main() {
 
 fn create_tray_menu() -> SystemTray {
     let quit = CustomMenuItem::new("quit".to_string(), "Quit");
-    let hide = CustomMenuItem::new("toggle".to_string(), "Toggle App");
+    let toggle = CustomMenuItem::new("toggle".to_string(), "Toggle App");
+
     let tray_menu = SystemTrayMenu::new()
-        .add_item(hide)
+        .add_item(toggle)
         .add_native_item(SystemTrayMenuItem::Separator)
         .add_item(quit);
 
