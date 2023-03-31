@@ -13,10 +13,6 @@
   "tauri": {
     "allowlist": {
       "all": false,
-      "shell": {
-        "all": false,
-        "open": true
-      },
       "globalShortcut": {
         "all": true
       },
@@ -52,16 +48,21 @@
       ],
       "identifier": "dev.dubis.quickgpt",
       "targets": [
-        "msi",
-        "updater"
+        "msi"
       ],
+      "windows": {
+        "allowDowngrades": false,
+        "webviewInstallMode": {
+          "type": "skip"
+        },
+        "wix": {
+          "skipWebviewInstall": true
+        }
+      },
       "copyright": "David Jiménez Ⓒ 2023"
     },
     "security": {
-      "csp": null
-    },
-    "updater": {
-      "active": false
+      "csp": "default-src 'self' 'unsafe-inline' https://api.openai.com/;"
     },
     "systemTray": {
       "iconPath": "icons/icon.ico"
