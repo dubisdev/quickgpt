@@ -13,7 +13,7 @@ edition = "2021"
 tauri-build = { version = "1.2", features = [] }
 
 [dependencies]
-tauri = { version = "1.2", features = ["fs-create-dir", "fs-read-dir", "fs-read-file", "fs-write-file", "global-shortcut-all", "path-all", "shell-open", "system-tray", "window-hide", "window-set-focus", "window-set-size", "window-show", "window-start-dragging"] }
+tauri = { version = "1.2", features = ["fs-create-dir", "fs-read-dir", "fs-read-file", "fs-write-file", "global-shortcut-all", "path-all", "system-tray", "window-hide", "window-set-focus", "window-set-size", "window-show", "window-start-dragging"] }
 tauri-plugin-autostart = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "dev" }
 tauri-plugin-single-instance = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "dev" }
 serde = { version = "1.0", features = ["derive"] }
