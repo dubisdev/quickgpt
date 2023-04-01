@@ -30,7 +30,7 @@
 - ⚙️ Choose the model you want to use (Available soon)
 
 <p align="center">
-  <img src="./assets/readmegif.gif"/>
+  <img src="./assets/quickgpttw.gif"/>
 </p>
 
 <p align="center">
