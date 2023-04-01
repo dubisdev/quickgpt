@@ -16,7 +16,7 @@ specifiers:
   the-new-css-reset: 1.8.4
   typescript: ^4.6.4
   vite: ^4.2.1
-  zustand: 4.3.6
+  zustand: 4.3.7
 
 dependencies:
   '@tauri-apps/api': 1.2.0
@@ -26,7 +26,7 @@ dependencies:
   react-syntax-highlighter: 15.5.0_react@18.2.0
   tauri-settings: 0.3.1
   the-new-css-reset: 1.8.4
-  zustand: 4.3.6_react@18.2.0
+  zustand: 4.3.7_react@18.2.0
 
 devDependencies:
   '@tauri-apps/cli': 1.2.3
@@ -1621,8 +1621,8 @@ packages:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
     dev: true
 
-  /zustand/4.3.6_react@18.2.0:
-    resolution: {integrity: sha512-6J5zDxjxLE+yukC2XZWf/IyWVKnXT9b9HUv09VJ/bwGCpKNcaTqp7Ws28Xr8jnbvnZcdRaidztAPsXFBIqufiw==}
+  /zustand/4.3.7_react@18.2.0:
+    resolution: {integrity: sha512-dY8ERwB9Nd21ellgkBZFhudER8KVlelZm8388B5nDAXhO/+FZDhYMuRnqDgu5SYyRgz/iaf8RKnbUs/cHfOGlQ==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
       immer: '>=9.0'

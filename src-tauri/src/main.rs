@@ -3,7 +3,6 @@
 
 use tauri::{AppHandle, Manager};
 use tauri::{CustomMenuItem, SystemTray, SystemTrayEvent, SystemTrayMenu, SystemTrayMenuItem};
-use tauri_plugin_autostart::MacosLauncher;
 
 #[derive(Clone, serde::Serialize)]
 struct Payload {
@@ -15,10 +14,6 @@ fn main() {
     let tray = create_tray_menu();
 
     tauri::Builder::default()
-        .plugin(tauri_plugin_autostart::init(
-            MacosLauncher::LaunchAgent,
-            Some(vec![""]),
-        ))
         .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
             app.emit_all("single-instance", Payload { args: argv, cwd })
                 .unwrap();
