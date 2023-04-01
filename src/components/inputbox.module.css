@@ -1,7 +1,7 @@
 .topArea {
     display: flex;
     background-color: rgb(84, 150, 255);
-    padding: 2px 12px;
+    padding: 0px 12px;
     height: 40px;
     width: 100%;
     border-bottom: .5px solid rgb(29, 28, 28);
@@ -21,6 +21,10 @@
 }
 
 .settingsIcon {
+    display: flex;
+    justify-content: end;
+    text-align: center;
+
     border-radius: 50%;
     width: 5%;
     cursor: pointer;

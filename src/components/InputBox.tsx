@@ -5,6 +5,7 @@ import { useInputStore } from "../state/inputStore"
 import styles from "./inputbox.module.css"
 import { useGptResponseStore } from "../state/gptResponseStore"
 import { LoadingIcon } from "./LoadingIcon"
+import { SettingsIcon } from "./SettingsIcon"
 
 export const InputBox = () => {
     const inputRef = useRef<HTMLInputElement>(null)
@@ -42,6 +43,6 @@ export const InputBox = () => {
             className={styles.inputBox}
             value={input}
         />
-        {loading ? <LoadingIcon /> : <button className={styles.settingsIcon} onClick={() => setInput(":settings:")}>⚙️</button>}
+        {loading ? <LoadingIcon /> : <button className={styles.settingsIcon} onClick={() => setInput(":settings:")}><SettingsIcon /></button>}
     </div>
 }
