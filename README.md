@@ -6,7 +6,7 @@
 
 <h1 align="center">QuickGPT</h1>
 
-<p align="center">A faster way to ask GPT</p>
+<p align="center">A ChatGPT tool for Windows</p>
 
 <p align="center">
   <a href="https://github.com/dubisdev/quickgpt/releases/latest">
