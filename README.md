@@ -9,8 +9,8 @@
 <p align="center">A ChatGPT tool for Windows</p>
 
 <p align="center">
-  <a href="https://github.com/dubisdev/quickgpt/releases/latest">
-    🔗 Go to Download Page
+  <a href="https://dubisdev.gumroad.com/l/QuickGPT">
+    🔗 Buy on Gumroad
   </a>
     &nbsp; | &nbsp; Give it a Star ⭐ | &nbsp;
     <a href="https://www.buymeacoffee.com/dubisdev">Support the project 🤝</a>
