@@ -9,7 +9,7 @@
 <p align="center">A ChatGPT tool for Windows</p>
 
 <p align="center">
-  <a href="https://dubisdev.gumroad.com/l/QuickGPT">
+  <a href="https://github.com/dubisdev/quickgpt/releases/latest">
     🔗 Go to Download Page
   </a>
     &nbsp; | &nbsp; Give it a Star ⭐ | &nbsp;
@@ -53,4 +53,4 @@ The app works with the OpenAI API, so you need to get an API key to use it.
 
 ## ⚖️ License
 
-© [David Jimenez](https://dubis.dev)
+MIT © [David Jimenez](https://dubis.dev)
