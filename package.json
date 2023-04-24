@@ -2,7 +2,7 @@
   "name": "quickgpt",
   "author": "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)",
   "description": "A faster way to ask GPT",
-  "repository": "dubisdev/quickgpt-code",
+  "repository": "dubisdev/quickgpt",
   "bugs": "dubisdev/quickgpt",
   "private": true,
   "version": "0.0.0-development",

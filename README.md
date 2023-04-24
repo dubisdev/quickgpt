@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://dubisdev.gumroad.com/l/QuickGPT">
-    🔗 Buy on Gumroad
+    🔗 Go to Download Page
   </a>
     &nbsp; | &nbsp; Give it a Star ⭐ | &nbsp;
     <a href="https://www.buymeacoffee.com/dubisdev">Support the project 🤝</a>
