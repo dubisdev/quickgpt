@@ -2,8 +2,8 @@
   "name": "quickgpt",
   "author": "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)",
   "description": "A faster way to ask GPT",
-  "repository": "dubisdev/quickgpt",
-  "bugs": "dubisdev/quickgpt",
+  "repository": "kiimesoft/quickgpt",
+  "bugs": "kiimesoft/quickgpt",
   "license": "MIT",
   "private": true,
   "version": "0.0.0-development",
@@ -15,23 +15,23 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "1.2.0",
+    "@tauri-apps/api": "1.5.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "8.0.7",
     "react-syntax-highlighter": "15.5.0",
-    "tauri-settings": "0.3.1",
-    "the-new-css-reset": "1.8.4",
-    "zustand": "4.3.7"
+    "tauri-settings": "0.3.4",
+    "the-new-css-reset": "1.11.2",
+    "zustand": "4.5.0"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "1.2.3",
-    "@types/node": "18.16.0",
-    "@types/react": "18.0.38",
-    "@types/react-dom": "18.0.11",
-    "@types/react-syntax-highlighter": "15.5.6",
-    "@vitejs/plugin-react": "4.0.0",
-    "typescript": "4.9.5",
-    "vite": "4.3.1"
+    "@tauri-apps/cli": "1.5.9",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "@types/react-syntax-highlighter": "15.5.11",
+    "@vitejs/plugin-react": "4.2.1",
+    "typescript": "5.3.3",
+    "vite": "5.0.12"
   }
 }
