@@ -1,0 +1,10 @@
+.settingsIcon {
+    display: flex;
+    justify-content: end;
+    text-align: center;
+
+    border-radius: 50%;
+    width: 5%;
+    cursor: pointer;
+    font-size: x-large;
+}

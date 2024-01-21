@@ -1,6 +1,8 @@
+import { useGptResponseStore } from "../state/gptResponseStore";
 import { ResultLayout } from "./ResultLayout"
 
-const ErrorMessage = ({ error }: { error: string }) => {
+const ErrorMessage = () => {
+    const error = useGptResponseStore(s => s.error)
     return <ResultLayout>
         Error: {error}
         <br />

@@ -6,22 +6,22 @@ import styles from "./inputbox.module.css"
 import { useGptResponseStore } from "../state/gptResponseStore"
 import { LoadingIcon } from "./LoadingIcon"
 import { SettingsIcon } from "./SettingsIcon"
+import { useHashLocation } from "../hooks/useHashLocation"
+import { Routes } from "../Routes/routes"
 
 export const InputBox = () => {
+    const [_, navigate] = useHashLocation()
     const inputRef = useRef<HTMLInputElement>(null)
     const [input, setInput] = useInputStore(s => [s.input, s.setInput])
     const loading = useGptResponseStore(s => s.loadingResponse)
 
     useEffect(() => {
-        listen("focus-input", () => {
-            inputRef.current?.focus()
-        })
+        listen("focus-input", () => { inputRef.current?.focus() })
         listen("set-input", ({ payload }) => {
             inputRef.current?.focus()
             setInput(payload as string)
         })
     }, [])
-
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInput(event.target.value);
@@ -30,6 +30,7 @@ export const InputBox = () => {
     const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
             askGpt(input)
+            navigate(Routes.Response)
         }
     };
 
@@ -43,6 +44,6 @@ export const InputBox = () => {
             className={styles.inputBox}
             value={input}
         />
-        {loading ? <LoadingIcon /> : <button className={styles.settingsIcon} onClick={() => setInput(":settings:")}><SettingsIcon /></button>}
+        {loading ? <LoadingIcon /> : <SettingsIcon />}
     </div>
 }

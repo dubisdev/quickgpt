@@ -22,6 +22,7 @@
     "react-syntax-highlighter": "15.5.0",
     "tauri-settings": "0.3.4",
     "the-new-css-reset": "1.11.2",
+    "wouter": "2.12.1",
     "zustand": "4.5.0"
   },
   "devDependencies": {

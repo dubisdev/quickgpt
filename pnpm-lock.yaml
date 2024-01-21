@@ -26,6 +26,9 @@ dependencies:
   the-new-css-reset:
     specifier: 1.11.2
     version: 1.11.2
+  wouter:
+    specifier: 2.12.1
+    version: 2.12.1(react@18.2.0)
   zustand:
     specifier: 4.5.0
     version: 4.5.0(@types/react@18.2.48)(react@18.2.0)
@@ -1790,6 +1793,15 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /wouter@2.12.1(react@18.2.0):
+    resolution: {integrity: sha512-G7a6JMSLSNcu6o8gdOfIzqxuo8Qx1qs+9rpVnlurH69angsSFPZP5gESNuVNeJct/MGpQg191pDo4HUjTx7IIQ==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
 
   /xtend@4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}

@@ -42,7 +42,7 @@
 The app works with the OpenAI API, so you need to get an API key to use it.
 
 1. Get the API key [here](https://platform.openai.com/account/api-keys).
-2. Click the `⚙️` icon or type `:settings:` in the QuickGPT search bar
+2. Click the `⚙️` icon in the QuickGPT search bar
 3. Paste it in the `OpenAI API Key` field
 4. Start using it!
 
