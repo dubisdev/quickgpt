@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/dubisdev/quickgpt">
+  <a href="https://github.com/kiimesoft/quickgpt">
     <img src="./src-tauri/icons/128x128.png"/>
   </a>
 </p>
@@ -9,7 +9,7 @@
 <p align="center">A ChatGPT tool for Windows</p>
 
 <p align="center">
-  <a href="https://github.com/dubisdev/quickgpt/releases/latest">
+  <a href="https://github.com/kiimesoft/quickgpt/releases/latest">
     🔗 Go to Download Page
   </a>
     &nbsp; | &nbsp; Give it a Star ⭐ | &nbsp;
