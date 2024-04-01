@@ -4,7 +4,7 @@ version = "0.0.0"
 description = "A faster way to ask GPT"
 authors = ["David Jiménez <dubisdev@gmail.com>"]
 license = ""
-repository = "https://github.com/kiimesoft/quickgpt/"
+repository = "https://github.com/dubisdev/quickgpt/"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
